@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import show_receipt
+from .views import receipt_list
 
 urlpatterns = [
-    path("", show_receipt, name="home"),
+    path("", receipt_list, name="home"),
 ]

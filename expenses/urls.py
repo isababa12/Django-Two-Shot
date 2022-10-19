@@ -19,10 +19,11 @@ from django.shortcuts import redirect
 
 
 def redirect_to_receipt_list(request):
-    return redirect("receipt_list")
+    return redirect("home")
 
 
 urlpatterns = [
+    path("", redirect_to_receipt_list, name="home"),
     path("admin/", admin.site.urls),
     path("receipts/", include("receipts.urls")),
 ]
