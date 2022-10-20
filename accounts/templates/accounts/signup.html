@@ -22,11 +22,13 @@
     </header>
     <main>
         <div>
-            <h1>Login</h1>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button>Login</button>
-            </div>
+        <h1>Sign up!</h1>
+            <form method = "post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Signup</button>
+        </form>
+    </div>
+    </main>
 </body>
 </html>

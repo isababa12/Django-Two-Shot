@@ -24,27 +24,19 @@
         </nav>
     </header>
     <main>
-        <h1>My Receipts</h1>
+        <h1>Expense Category</h1>
         <table>
             <thead>
                 <tr>
-                    <th>Vendor</th>
-                    <th>Total</th>
-                    <th>Tax</th>
-                    <th>Date</th>
-                    <th>Category</th>
-                    <th>Account</th>
+                    <th>Name</th>
+                    <th>Number of Receipts</th>
                 </tr>
             </thead>
             <tbody>
-                {% for receipt in receipt_object.all %}
+                {% for categories in expense_object %}
                 <tr>
-                    <td>{{ receipt.vendor }}</td>
-                    <td>{{ receipt.total }}</td>
-                    <td>{{ receipt.tax }}</td>
-                    <td>{{ receipt.date|date:"m/d/y"}}</td>
-                    <td>{{ receipt.category }}</td>
-                    <td>{{ receipt.account }}</td>
+                    <td>{{ categories.name }}</td>
+                    <td>{{ categories.receipts.count }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
